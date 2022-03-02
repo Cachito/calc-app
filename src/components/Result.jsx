@@ -14,25 +14,32 @@ import PropTypes from 'prop-types'
     una o mas variables en la firma
 */
 
+// result sin simplificar
+{/*
 const Result = ({ value }) => {
-     /* acá declaro el destructuring */
-    /* const { value } = props */
-    debugger
-    console.log("Render Result", value)
+    //acá declaro el destructuring
+    //const { value } = props
+    //debugger
+    //console.log("Render Result", value)
     return (
         <div className="result">
-            {/*
                 esto se puede hacer en más de una línea:
                 {
                     props.value
                 }
-            */}
 
-            { /*acá uso destructuring */ }
+            //acá uso destructuring
             {value}
         </div>
     )
-}
+*/}
+
+//result simplificado
+const Result = ({ value }) =>(
+    <div className="result">
+        {value}
+    </div>
+)
 
 /*
     se valida el tipo de dato del parámetro value

@@ -1,6 +1,7 @@
 // importación de referencias
 import React from 'react'
 import Button from './components/Button'
+import MathOperations from './components/MathOperations'
 import Result from './components/Result'
 
 import './App.css'
@@ -18,7 +19,7 @@ import './App.css'
 // -> es decir que esta sintaxis define la firma del método
 const App = () => {
     const clickHandlerFunction = text => {
-        console.log("clickHandler", text)
+        console.log("clickHandler-1", text)
     }
 
     // -> cuerpo del método
@@ -43,13 +44,14 @@ const App = () => {
             <button>clear</button>
             <button>r</button>
         </div>
-        <div className="math-operations">
-            <button>+</button>
-            <button>-</button>
-            <button>*</button>
-            <button>/</button>
-            <button>=</button>
-        </div>
+        <MathOperations
+            onClickOperation={operation =>
+                console.log("Operación:", operation)
+            }
+            onClickEqual={equal =>
+                console.log("Equal:", equal)
+            }
+        />
     </main>
     )
 }
